@@ -139,7 +139,8 @@ class ActsAsArchive
             AlsoMigrate.configuration ||= []
             AlsoMigrate.configuration << options.merge(
               :source => self.table_name,
-              :destination => klass.table_name
+              :destination => klass.table_name,
+              :indexes => false
             )
           end
         end
